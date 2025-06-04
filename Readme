@@ -1,0 +1,69 @@
+# Group Members: #
+- 10422033_Nguyễn Phú Huy
+- 10422095_Nguyễn Hoàng Hạo
+
+# Tiny Project Testing Guide #
+PART A:
+- A1 (run mainVector.exe)
+g++ main_vector.cpp Vector.cpp -o mainVector
+mainVector.exe
+OUTPUT:
+Vector v1: 1 2 3
+Vector v2 = v1 * 2: 2 4 6
+Vector v3 = v1 + v2: 3 6 9
+Vector v4 = v3 - v1: 2 4 6
+Dot product v1 * v2 = 28
+
+- A2 (run testMatrix.exe)
+g++ Matrix.cpp main_matrix.cpp -o testMatrix
+testMatrix.exe
+Output:
+Matrix A:
+1 2 
+3 4 
+
+Matrix B:
+5 6 
+7 8 
+
+A + B:
+6 8 
+10 12 
+
+A * B:
+19 22 
+43 50 
+
+- A3 (run solveSystem.exe)
+g++ Vector.cpp Matrix.cpp LinearSystem.cpp main_linear.cpp -o solveSystem
+solveSystem.exe
+Output:
+Solving Ax = b using Gaussian elimination:
+-0.0232558 1.67442 1.2093 
+
+Solving Ax = b using Conjugate Gradient (symmetric A):
+-0.0232558 1.67442 1.2093
+
+- A4 (run leastSquares.exe)
+g++ Vector.cpp Matrix.cpp LinearSystem.cpp LeastSquaresSolver.cpp main_leastsquares.cpp -o leastSquares
+leastSquares.exe
+Output:
+Least squares solution (Ax Γëê b):
+1.4 3.5
+
+Part B: (run lr.exe)
+d:\Visual_Studio_Code\code\programming_2\Pro2_2025\TinyProjectFull>g++ Vector.cpp Matrix.cpp LinearSystem.cpp LeastSquaresSolver.cpp LinearRegression.cpp main_lr.cpp -o lr
+
+d:\Visual_Studio_Code\code\programming_2\Pro2_2025\TinyProjectFull>lr.exe                                               
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Model coefficients:
+x1 = -0.0213462
+x2 = 0.0184727
+x3 = 0.00264645
+x4 = 0.402285
+x5 = 1.30587
+x6 = 1.10733
+RMSE on training set = 56.1385
+RMSE on test set = 101.899
