@@ -5,6 +5,7 @@
 #include <string>
 #include <random>
 #include <algorithm>
+#include <ctime>
 
 //  Hàm shuffle và chia dữ liệu
 void ShuffleAndSplit(const std::string& inputFile,
@@ -29,8 +30,7 @@ void ShuffleAndSplit(const std::string& inputFile,
     }
 
     //  Shuffle
-    std::random_device rd;
-    std::mt19937 g(rd());
+     std::mt19937 g(static_cast<unsigned int>(std::time(nullptr)) + rand());
     std::shuffle(allLines.begin(), allLines.end(), g);
 
     int total = allLines.size();
@@ -49,20 +49,30 @@ void ShuffleAndSplit(const std::string& inputFile,
 }
 
 int main() {
-    //  Tự động chia dữ liệu
-    ShuffleAndSplit("machine.data", "train.data", "test.data");
+    const int runs = 30;
+    double total_train_rmse = 0.0;
+    double total_test_rmse = 0.0;
 
-    //  Linear Regression
-    LinearRegression model;
-    model.LoadDataFromCSV("train.data");
-    model.Train();
-    model.PrintCoefficients();
+    for (int i = 0; i < runs; ++i) {
+        ShuffleAndSplit("machine.data", "train.data", "test.data");
 
-    double train_rmse = model.Evaluate("train.data");
-    std::cout << "RMSE on training set = " << train_rmse << std::endl;
+        LinearRegression model;
+        model.LoadDataFromCSV("train.data");
+        model.Train();
 
-    double test_rmse = model.Evaluate("test.data");
-    std::cout << "RMSE on test set = " << test_rmse << std::endl;
+        double train_rmse = model.Evaluate("train.data");
+        double test_rmse = model.Evaluate("test.data");
+
+        total_train_rmse += train_rmse;
+        total_test_rmse += test_rmse;
+
+        std::cout << "Run " << (i + 1) << ": "
+                  << "Train RMSE = " << train_rmse
+                  << ", Test RMSE = " << test_rmse << std::endl;
+    }
+
+    std::cout << "Average Train RMSE: " << (total_train_rmse / runs) << std::endl;
+    std::cout << "Average Test RMSE: " << (total_test_rmse / runs) << std::endl;
 
     return 0;
 }

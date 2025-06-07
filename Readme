@@ -53,18 +53,130 @@ Least squares solution (Ax Γëê b):
 1.4 3.5
 
 Part B: (run lr.exe)
-d:\Visual_Studio_Code\code\programming_2\Pro2_2025\TinyProjectFull>g++ Vector.cpp Matrix.cpp LinearSystem.cpp LeastSquaresSolver.cpp LinearRegression.cpp main_lr.cpp -o lr
+D:\Visual_Studio_Code\cross\Pro2_Project_2025>g++ Vector.cpp Matrix.cpp LinearSystem.cpp LeastSquaresSolver.cpp LinearRegression.cpp main_lr.cpp -o lr
 
-d:\Visual_Studio_Code\code\programming_2\Pro2_2025\TinyProjectFull>lr.exe                                               
+D:\Visual_Studio_Code\cross\Pro2_Project_2025>lr.exe                                                                                 
 Shuffled and split 209 rows:
   - 167 rows into train.data
   - 42 rows into test.data
-Model coefficients:
-x1 = -0.0213462
-x2 = 0.0184727
-x3 = 0.00264645
-x4 = 0.402285
-x5 = 1.30587
-x6 = 1.10733
-RMSE on training set = 56.1385
-RMSE on test set = 101.899
+Run 1: Train RMSE = 65.8101, Test RMSE = 72.4046
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 2: Train RMSE = 60.6847, Test RMSE = 88.2026
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 3: Train RMSE = 66.2484, Test RMSE = 65.8643
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 4: Train RMSE = 63.6364, Test RMSE = 73.7693
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 5: Train RMSE = 66.2244, Test RMSE = 69.6778
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 6: Train RMSE = 62.8483, Test RMSE = 88.6154
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 7: Train RMSE = 69.863, Test RMSE = 47.2069
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 8: Train RMSE = 45.6076, Test RMSE = 147.715
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 9: Train RMSE = 57.081, Test RMSE = 100.571
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 10: Train RMSE = 59.9062, Test RMSE = 97.8458
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 11: Train RMSE = 57.41, Test RMSE = 99.6359
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 12: Train RMSE = 65.9325, Test RMSE = 72.9481
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 13: Train RMSE = 66.5035, Test RMSE = 66.4042
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 14: Train RMSE = 60.6193, Test RMSE = 84.4894
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 15: Train RMSE = 65.8919, Test RMSE = 72.6937
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 16: Train RMSE = 66.6171, Test RMSE = 65.6355
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 17: Train RMSE = 66.9727, Test RMSE = 65.7068
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 18: Train RMSE = 63.1394, Test RMSE = 79.5377
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 19: Train RMSE = 68.0776, Test RMSE = 57.8883
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 20: Train RMSE = 64.7854, Test RMSE = 74.8235
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 21: Train RMSE = 64.3332, Test RMSE = 77.4249
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 22: Train RMSE = 68.6042, Test RMSE = 54.8744
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 23: Train RMSE = 58.8329, Test RMSE = 108.47
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 24: Train RMSE = 70.3809, Test RMSE = 43.6204
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 25: Train RMSE = 66.5127, Test RMSE = 65.0946
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 26: Train RMSE = 65.0425, Test RMSE = 79.9606
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 27: Train RMSE = 70.8553, Test RMSE = 39.9028
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 28: Train RMSE = 65.8272, Test RMSE = 72.4221
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 29: Train RMSE = 69.3783, Test RMSE = 52.7295
+Shuffled and split 209 rows:
+  - 167 rows into train.data
+  - 42 rows into test.data
+Run 30: Train RMSE = 62.4541, Test RMSE = 87.3287
+Average Train RMSE: 64.2027
+Average Test RMSE: 75.7821
+
+
